@@ -33,6 +33,6 @@ public class TestBase {
         String sessionId = Selenide.sessionId().toString();
         Attach.pageSource();
         closeWebDriver();
-        //Attach.addVideo(sessionId);
+        Attach.addVideo(sessionId);
     }
 }
