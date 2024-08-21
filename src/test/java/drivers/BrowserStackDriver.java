@@ -16,7 +16,11 @@ import config.BrowserStackConfig;
 
 public class BrowserStackDriver implements WebDriverProvider {
 
-    private static final BrowserStackConfig config = ConfigFactory.create(BrowserStackConfig.class);
+    private static final BrowserStackConfig config =
+            ConfigFactory.create(
+                    BrowserStackConfig.class,
+                    System.getProperties()
+            );
     private static final AuthConfig authConfig = ConfigFactory.create(AuthConfig.class);
 
     @Nonnull
