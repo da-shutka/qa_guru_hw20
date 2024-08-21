@@ -4,6 +4,7 @@ import org.aeonbits.owner.Config;
 
 @Config.LoadPolicy(Config.LoadType.FIRST)
 @Config.Sources({
+        "classpath:${env}.properties",
         "classpath:samsung.properties"
 })
 public interface BrowserStackConfig extends Config {
