@@ -32,7 +32,7 @@ public class SearchTests extends TestBase {
             $(id("org.wikipedia.alpha:id/search_src_text")).sendKeys("Appium");
         });
         step("Нажать на статью с заголовком Appium", () ->
-                $(id("org.wikipedia.alpha:id/page_list_item_title")).click() //.shouldHave(text("Appium")).click()
+                $(id("org.wikipedia.alpha:id/page_list_item_title")).click()
         );
         step("Проверить, что открылась страница с ошибкой", () ->
                 $(id("org.wikipedia.alpha:id/view_wiki_error_text")).shouldHave(text("Error"))
